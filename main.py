@@ -22,3 +22,9 @@ def create_character(name, strength, intelligence, charisma):
 
     if strength + intelligence + charisma != 7:
         return "The character should start with 7 points"
+
+    str_line = f"STR {full_dot * strength}{empty_dot * (10 - strength)}"
+    int_line = f"INT {full_dot * intelligence}{empty_dot * (10 - intelligence)}"
+    cha_line = f"CHA {full_dot * charisma}{empty_dot * (10 - charisma)}"
+
+    return f"{name}\n{str_line}\n{int_line}\n{cha_line}"
